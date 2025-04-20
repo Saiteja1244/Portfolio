@@ -66,7 +66,7 @@ function App() {
   const handleDownload = (e: React.MouseEvent) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=10iwmb9qds5-mbm0ZIB9b3PVLGvbz5_ss';
+    link.href = 'https://drive.google.com/uc?export=download&id=1jMHvRGLd7fgzrFnYWyK11FpqHTLzigOy';
     link.download = 'Saiteja_Pallerla_Resume.pdf';
     document.body.appendChild(link);
     link.click();

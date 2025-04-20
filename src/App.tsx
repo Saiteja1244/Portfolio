@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, Phone, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+
 function FloatingCube({ delay = 0 }) {
   return (
     <motion.div
@@ -76,11 +77,10 @@ function App() {
     e.preventDefault();
     window.location.href = 'mailto:saitejapallerla14@gmail.com';
   };
-
   return (
     <div className="min-h-screen bg-[#1C1D24] text-white relative">
       <BackgroundAnimation />
-
+  
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
@@ -90,6 +90,7 @@ function App() {
       >
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left column - Text content */}
             <div>
               <motion.h1 
                 initial={{ opacity: 0, x: -20 }}
@@ -166,18 +167,27 @@ function App() {
                 </div>
               </motion.div>
             </div>
+  
+            {/* Right column - GIF with gradient effect */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
               className="relative aspect-square max-w-md mx-auto"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#FFD700] to-[#FFA500] opacity-20 rounded-full transform -rotate-6 animate-glow"></div>
+              {/* Gradient background effect */}
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-[#FFD700] to-[#FFA500] opacity-20 rounded-full transform -rotate-6 animate-glow"></div> */}
+              
+              {/* GIF overlay */}
+              <img 
+                src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
+                alt="Coding animation"
+                className="rounded-lg shadow-2xl w-full h-full object-cover"
+              />
             </motion.div>
           </div>
         </div>
       </motion.section>
-
       {/* Technical Skills Section */}
       <section className="py-20 px-4 md:px-8 bg-[#2A2B32]">
         <div className="max-w-7xl mx-auto">

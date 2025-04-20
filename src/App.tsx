@@ -73,6 +73,7 @@ function App() {
     document.body.removeChild(link);
   };
 
+  
   const handleMailTo = (e: React.MouseEvent) => {
     e.preventDefault();
     window.location.href = 'mailto:saitejapallerla14@gmail.com';
